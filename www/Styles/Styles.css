@@ -1,0 +1,224 @@
+/** HTML5/CSS3, EDGE/CHROME                                  *** Styles.css ***
+ ******************************************************************************
+ * пифи.рф                                         Определить начальные стили *
+ ******************************************************************************
+
+                                                     Автор:       Труфанов В.Е.
+                                                     Дата создания:  07.01.2019
+ Copyright © 2019 tve                                Посл.изменение: 05.05.2020
+*/
+
+/**
+ * Определяем базовый шрифт, устанавливаем размеры шрифтов по умолчанию
+**/
+html
+{
+   font-size: 10px;
+}
+body 
+{
+   font-size: 1.4rem;
+   margin: 0;
+   background: rgb(204,255,204);
+   background: -moz-linear-gradient(90deg, rgba(204,255,204,1) 0%, rgba(204,255,255,1) 100%);
+   background: -webkit-linear-gradient(90deg, rgba(204,255,204,1) 0%, rgba(204,255,255,1) 100%);
+   background: linear-gradient(90deg, rgba(204,255,204,1) 0%, rgba(204,255,255,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ccffcc",endColorstr="#ccffff",GradientType=1);
+   /*background:yellow;*/
+   /* Так как не можем определить, при каких условиях появляется и исчезает */
+   /* вертикальная полоса прокрутки и из-за этого не можем качественно      */
+   /* состыковать по ширине игровой стол и полосы прокрутки, то обязательно */
+   /* показываем вертикальную полосу прокрутки                              */
+   overflow-y:scroll;
+   /* В  начальном состоянии скрываем body, открываем далее с помощью js */
+   display: none;
+}
+/* В начальном состоянии скрываем дивы, включаемые по обстановке */
+#DriveLeft, #DriveRight, #DriveBottom,
+#lList, #rList
+{
+   display: none;
+}
+/* Определяем первый порядок дивов:                               */
+/* правую и левую бесконечные полосы и фиксированный рабочий стол */   
+#lList
+{
+   /*background-color:#CCFFCC;*/
+   text-align:justify; 
+   padding:1rem 1rem 1rem 1rem;
+   /* Снимаем появление горизонтальной полосы прокрутки    */
+   /* при маленькой ширине левой бесконечной полосы #lList */
+   overflow-x:hidden;
+   text-overflow:ellipsis;
+}
+#Main
+{
+   height:100%;
+   /*background-color:red;*/
+   background: linear-gradient(180deg, rgba(192,192,192,1) 0%, rgba(255,204,153,1) 100%);
+}
+#rList 
+{
+   /*background-color:#CCFFFF;*/
+   text-align:justify; 
+   padding:1rem 1rem 1rem 1rem;
+   /* Снимаем появление полосы прокрутки при маленькой ширине правой */
+   /* бесконечной полосы #rList                                      */
+   overflow-x:hidden;
+   text-overflow:ellipsis;
+}
+/* Определяем второй порядок дивов (на рабочем столе): */
+/* верхнее поле, игровое поле, нижнее поле             */   
+#Heady 
+{
+   width:100%;
+   background-color:#C0C0C0;
+   text-align:justify; 
+   overflow:hidden;
+}
+#Play  
+{
+   width:100%;
+   background:radial-gradient(farthest-side ellipse at top left,#f9f6f1 0,#d7d0c5 100%);
+   font-weight:bold;
+   text-align:justify; 
+   overflow:hidden;
+}
+#Footy  
+{
+   width:100%;
+   background-color:#FFCC99;
+   text-align:justify; 
+   overflow:hidden;
+}
+/** 
+ * DESKTOP: Позиционируем дивы таким образом, чтобы ширина "игрового стола"
+ * (div MAIN) задавалась в пикселах, а ширина правой и левой бесконечных
+ * вертикальныех полос в процентах от оставшегося пространства на экране
+**/
+#lList
+{
+   float:left;
+   width:194px;
+}
+#Main
+{
+   float:left;
+   position:fixed;
+   top:0;
+   width:801px;
+   left:50%;
+   margin-right:-50%;
+   transform:translate(-50%);
+}
+#rList 
+{
+   float:right;
+   width:194px;
+}
+#rListControl 
+{
+   z-index:101;
+}
+#ListInfo 
+{
+   padding:1rem 0 0 0;
+}
+/** 
+ * DESKTOP: Оформляем лист с настройками
+**/
+#ListInfoCtrl 
+{
+   padding: 1rem 0 0 0;
+   display: none;
+}
+#ListInfoCtrl h3 
+{
+	font: italic normal 2rem Baskerville, "Palatino Linotype", "Times New Roman", serif;
+	color: #46874D;
+	background: url(../images/underline.png) no-repeat 0px 88%;
+   font-weight: bold;
+   text-align: center; 
+}
+#ListInfoCtrl .inventory 
+{
+   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   width: 100%;
+   margin-top: 5px;
+   border-collapse: collapse;
+}
+#ListInfoCtrl .inventory td 
+{
+   font-size: 1.1em;
+   border: 1px solid #DDB575;
+   padding: 3px 7px 2px 7px;
+}
+#ListInfoCtrl .inventory tr:nth-of-type(even)
+{
+   background-color: rgba(255,255,255,.1);
+}
+#ListInfoCtrl .inventory tr:nth-of-type(odd)
+{
+   background-color: rgba(229,76,16,.1);
+}
+
+/** 
+ * DESKTOP: Позиционируем дивы рабочего стола таким образом, чтобы высота
+ * игрового поля задавалась в пикселах, а высоты верхнего и нижнего полей
+ * в процентах от высоты оставшегося пространства на игровом столе
+**/
+#Heady 
+{
+   height:20%;
+}
+#Play  
+{
+   height:60%;
+}
+#Footy  
+{
+   height:20%;
+}
+/* Настраиваем начальное состояние кнопок управления и настроек */
+button
+{
+   height: 35px;
+   width: 40px;
+}
+i
+{
+   color: red;
+}
+#bUndo
+{
+   display:none;
+}
+/* Настройки дива ListInfo */
+#ListInfo blockquote
+{
+   background: #FFE9EF;
+   padding: 0.4rem 2rem 0.4rem 2rem;
+   font-size: 80%; 
+	font-weight: bold;
+   text-align: center; 
+   width: 80%;
+   margin-left: 10%; 
+   border-radius: 1rem; 
+}
+#ListInfo p
+{
+   margin: .5rem 0 .5rem 0;
+   text-indent: 1rem; 
+}
+#ListInfo .istochnik
+{
+   margin: 1rem 0 1rem 0;
+   font-size: 90%; 
+	font-weight: bold;
+   text-align: left; 
+   text-indent: 0; 
+}
+/*
+ *************************************************************** Styles.css ***
+*/	
+	

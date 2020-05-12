@@ -1,0 +1,175 @@
+[Config]
+Compilator.SaveAll=0
+Compilator.Capture=0
+Compilator.CompileOnBackground=0
+Compilator.ProgSaveAll=0
+Compilator.ProgRunSelection=0
+Compilator.LogType=0
+DefaultDir=C:\PiFiRF
+DefaultCP=0
+LogtoEnd=1
+DontOpen=0
+AbsolutePath=0
+FileFormat=0
+ProjectFilesOnly=0
+HTServer=localhost
+Extensions=*.*
+[Project tree]
+PiFiRF
+	+PiFiRF
+		-Favicon
+			-favicon_package_v0.16
+				Favicon\favicon_package_v0.16\android-chrome-192x192.png
+				Favicon\favicon_package_v0.16\android-chrome-512x512.png
+				Favicon\favicon_package_v0.16\apple-touch-icon.png
+				Favicon\favicon_package_v0.16\browserconfig.xml
+				Favicon\favicon_package_v0.16\favicon.ico
+				Favicon\favicon_package_v0.16\favicon-16x16.png
+				Favicon\favicon_package_v0.16\favicon-32x32.png
+				Favicon\favicon_package_v0.16\mstile-150x150.png
+				Favicon\favicon_package_v0.16\safari-pinned-tab.svg
+				Favicon\favicon_package_v0.16\site.webmanifest
+			-right-manifest-master
+				-icons
+					Favicon\right-manifest-master\icons\android-icon-144x144.png
+					Favicon\right-manifest-master\icons\android-icon-192x192.png
+					Favicon\right-manifest-master\icons\android-icon-36x36.png
+					Favicon\right-manifest-master\icons\android-icon-48x48.png
+					Favicon\right-manifest-master\icons\android-icon-72x72.png
+					Favicon\right-manifest-master\icons\android-icon-96x96.png
+					Favicon\right-manifest-master\icons\apple-icon.png
+					Favicon\right-manifest-master\icons\apple-icon-114x114.png
+					Favicon\right-manifest-master\icons\apple-icon-120x120.png
+					Favicon\right-manifest-master\icons\apple-icon-144x144.png
+					Favicon\right-manifest-master\icons\apple-icon-152x152.png
+					Favicon\right-manifest-master\icons\apple-icon-180x180.png
+					Favicon\right-manifest-master\icons\apple-icon-57x57.png
+					Favicon\right-manifest-master\icons\apple-icon-60x60.png
+					Favicon\right-manifest-master\icons\apple-icon-72x72.png
+					Favicon\right-manifest-master\icons\apple-icon-76x76.png
+					Favicon\right-manifest-master\icons\apple-icon-precomposed.png
+					Favicon\right-manifest-master\icons\browserconfig.xml
+					Favicon\right-manifest-master\icons\favicon.ico
+					Favicon\right-manifest-master\icons\favicon-16x16.png
+					Favicon\right-manifest-master\icons\favicon-32x32.png
+					Favicon\right-manifest-master\icons\favicon-96x96.png
+					Favicon\right-manifest-master\icons\ms-icon-144x144.png
+					Favicon\right-manifest-master\icons\ms-icon-150x150.png
+					Favicon\right-manifest-master\icons\ms-icon-310x310.png
+					Favicon\right-manifest-master\icons\ms-icon-70x70.png
+				Favicon\right-manifest-master\codes.js
+				Favicon\right-manifest-master\index.html
+				Favicon\right-manifest-master\manifest.json
+				Favicon\right-manifest-master\startBS.bat
+			Favicon\favicon.png
+			Favicon\RealFaviconGenerator_News.vcf
+			Favicon\ќ favicon.doc
+			Favicon\ѕи.jpg
+			Favicon\ѕи ор.png
+			Favicon\ѕи‘и1v.png
+			Favicon\ѕи‘и1v.psd
+			Favicon\ѕи‘и2v.png
+			Favicon\ѕи‘и2v.psd
+			Favicon\‘и.jpg
+			Favicon\‘и„ер.png
+		-ThisWorld
+			-BP1
+				ThisWorld\BP1\ThisWold.bp1
+			ThisWorld\»гра ∆»«Ќ№.doc
+			ThisWorld\ онвей.doc
+			ThisWorld\–азвитие жизни.doc
+			ThisWorld\„то наша ∆изнь - »гра.doc
+		+www
+			-assets
+				www\assets\baddie.png
+				www\assets\diamond.png
+				www\assets\dude.png
+				www\assets\firstaid.png
+				www\assets\platform.png
+				www\assets\sky.png
+				www\assets\star.png
+			-Images
+				www\Images\underline.png
+			-img
+				www\img\ball.png
+			-Js
+				www\Js\phaser242.min.js
+				www\Js\phaser-arcade-physics.min.js
+				www\Js\Pifirf.js
+			+Pages
+				+CollStars
+					www\Pages\CollStars\indexCollStars.php
+				-MDN-Breakout
+					-WithPhaser
+						-img
+							www\Pages\MDN-Breakout\WithPhaser\img\ball.png
+						-js
+							www\Pages\MDN-Breakout\WithPhaser\js\phaser.min.js
+						www\Pages\MDN-Breakout\WithPhaser\Phas1-Padbabricks.html
+				-ThisWorld
+					www\Pages\ThisWorld\indexThisWorld.php
+					www\Pages\ThisWorld\styleThisWorld.css
+				www\Pages\Footy.html
+				www\Pages\Heady.html
+				www\Pages\indexStart.php
+				www\Pages\ListExt.html
+				www\Pages\ListInfo.html
+				www\Pages\ListInfoCtrl.html
+				www\Pages\Play.html
+			-Styles
+				www\Styles\mobiStyles.css
+				www\Styles\Reset.css
+				www\Styles\Styles.css
+			www\android-chrome-192x192.png
+			www\android-chrome-512x512.png
+			www\apple-touch-icon.png
+			www\favicon.ico
+			www\iGetAbove.php
+			www\index.php
+			www\indexold1.php
+			www\indexold2.html
+			www\indexold2.php
+			www\indexold3.html
+			www\indexold3.php
+			www\indexold4.html
+			www\iniMem.php
+			www\iniWorkSpace.php
+			www\log.txt
+			www\logis.txt
+			www\Main.php
+			www\manifest.json
+			www\mstile-150x150.png
+			www\robots.txt
+			www\safari-pinned-tab.svg
+			www\sitemap.xml
+			www\ViewArray.php
+			www\yandex_310dcb948880384c.html
+		-ћатериалы
+		LICENSE
+		PiFiRF.ppr
+		PiFiRF.xls
+		README.md
+[Open project files]
+0=www\index.php
+1=www\Styles\Styles.css
+2=www\Pages\Heady.html
+3=www\Pages\ListInfo.html
+4=www\Main.php
+[Selected Project Files]
+Main=
+Selected=www\Styles\Styles.css
+[www\index.php]
+TopLine=7
+Caret=75,10
+[www\Styles\Styles.css]
+TopLine=196
+Caret=16,216
+[www\Pages\Heady.html]
+TopLine=1
+Caret=1,1
+[www\Pages\ListInfo.html]
+TopLine=45
+Caret=20,30
+[www\Main.php]
+TopLine=15
+Caret=24,20

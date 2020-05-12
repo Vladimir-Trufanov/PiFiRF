@@ -1,0 +1,34 @@
+[20-Apr-2020 14:21:00 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\MakeCookie() in C:\PiFiRF\www\iniMem.php:22
+Stack trace:
+#0 C:\PiFiRF\www\Main.php(35): require_once()
+#1 C:\PiFiRF\www\index.php(25): require_once('C:\\PiFiRF\\www\\M...')
+#2 {main}
+  thrown in C:\PiFiRF\www\iniMem.php on line 22
+[20-Apr-2020 14:24:04 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function prown\MakeSession() in C:\PiFiRF\www\iniMem.php:28
+Stack trace:
+#0 C:\PiFiRF\www\Main.php(35): require_once()
+#1 C:\PiFiRF\www\index.php(25): require_once('C:\\PiFiRF\\www\\M...')
+#2 {main}
+  thrown in C:\PiFiRF\www\iniMem.php on line 28
+[21-Apr-2020 07:14:36 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function SeoTags() in C:\PiFiRF\www\Main.php:116
+Stack trace:
+#0 C:\PiFiRF\www\index.php(25): require_once()
+#1 {main}
+  thrown in C:\PiFiRF\www\Main.php on line 116
+[21-Apr-2020 11:40:36 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '<' in C:\PiFiRF\www\Pages\CollStars\indexCollStars.php on line 21
+[21-Apr-2020 11:41:48 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\PiFiRF\www\Pages\CollStars\indexCollStars.php on line 348
+[21-Apr-2020 11:43:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected end of file in C:\PiFiRF\www\Pages\CollStars\indexCollStars.php on line 340
+[27-Apr-2020 06:49:10 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/rListInfo.html' (include_path='.;C:\php\pear') in C:\PiFiRF\www\Main.php on line 69
+[27-Apr-2020 06:49:46 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/rListInfoCtrl.html' (include_path='.;C:\php\pear') in C:\PiFiRF\www\Main.php on line 69
+[28-Apr-2020 12:22:21 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$' in C:\PiFiRF\www\Main.php on line 172
+[01-May-2020 22:51:57 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'var' (T_VAR), expecting end of file in C:\PiFiRF\www\Main.php on line 170
+[01-May-2020 22:53:32 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '=' in C:\PiFiRF\www\Main.php on line 170
+[02-May-2020 07:04:41 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/lList.html' (include_path='.;C:\php\pear') in C:\PiFiRF\www\Main.php on line 17
+[02-May-2020 07:05:42 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'Pages/ListExt.html' (include_path='.;C:\php\pear') in C:\PiFiRF\www\Main.php on line 17
+[05-May-2020 07:33:34 Asia/Kuwait] PHP Parse error:  syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$' in C:\PiFiRF\www\Pages\CollStars\indexCollStars.php on line 47
+[05-May-2020 16:50:12 Asia/Kuwait] PHP Fatal error:  Uncaught Error: Call to undefined function SeoTags() in C:\PiFiRF\www\Main.php:139
+Stack trace:
+#0 C:\PiFiRF\www\index.php(25): require_once()
+#1 {main}
+  thrown in C:\PiFiRF\www\Main.php on line 139
+[05-May-2020 17:00:04 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in C:\PiFiRF\www\Main.php on line 171

@@ -1,0 +1,12 @@
+
+User-agent: Google
+Disallow: /
+Allow: /$
+Allow: /sitemap.xml$
+
+User-agent: *
+Disallow: /
+Allow: /$
+Allow: /sitemap.xml$
+
+Sitemap: http://пифи.рф/sitemap.xml

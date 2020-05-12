@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION;TYPE=WORK:3.0
+FN;CHARSET=UTF-8:Philippe Bernard
+N;CHARSET=UTF-8:Philippe Bernard;;;;
+PROFILE:VCARD
+ADR;CHARSET=UTF-8:;;11 rue Sauffroy;Paris;;75017;France
+EMAIL:philippe@realfavicongenerator.net
+ORG;CHARSET=UTF-8:RealFaviconGenerator
+URL:http://realfavicongenerator.net/
+END:VCARD
