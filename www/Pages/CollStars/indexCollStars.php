@@ -93,9 +93,8 @@ http://phaser.io/examples
 // использовать. Рекомендованным параметром является Phaser.AUTO, который 
 // автоматически пытается использовать WebGL, но если браузер или устройство 
 // не поддерживает его, он вернется к Canvas.
-// Четвертый параметр - пустая строка, это идентификатор элемента DOM, 
+// Четвертый параметр - это идентификатор элемента DOM, 
 // в который вы хотите вставить элемент canvas, который создает Phaser. 
-// Поскольку мы оставили это поле пустым, оно будет просто добавлено к телу. 
 // Последний параметр - это объект, содержащий четыре ссылки на основные функции
 // Phasers.
 
@@ -112,18 +111,20 @@ function preload()
    спрайтов. Вы можете использовать любую допустимую строку JavaScript в 
    качестве ключа.
    */
-   game.load.image('sky', 'assets/sky.png');
-   game.load.image('ground', 'assets/platform.png');
-   game.load.image('star', 'assets/star.png');
-   game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+   game.load.image('sky', 'assets/sky.png');                      // общее поле игры
+   game.load.image('ground', 'assets/platform.png');              // платформа, земля
+   game.load.image('zemlya', 'assets/zemlya40x80.png');           // участок зыбкой земли
+   game.load.image('star', 'assets/star.png');                    // звезда
+   game.load.spritesheet('dude', 'assets/dude.png', 32, 48);      // гномик - спрайт
 }
 var player;
 var platforms;
 var cursors;
 var stars;
+var maxzemlya=10;         // максимальное число зыбких земель, которые могут стать ямами
 /*  
-// Обеспечиваем подсчет очков. Для этого мы будем использовать объект Phaser.Text. З
-// десь мы создаем две новые переменные, одну для хранения фактической оценки 
+// Обеспечиваем подсчет очков. Для этого мы будем использовать объект Phaser.Text. 
+// Здесь мы создаем две новые переменные, одну для хранения фактической оценки 
 // и самого текстового объекта
 */
 var score = 0;
@@ -161,7 +162,7 @@ function create()
    // Мы включим физику для любого объекта, который создан в этой группе
    platforms.enableBody = true;
    // Здесь мы создаем землю
-   var ground = platforms.create(0, game.world.height - 64, 'ground');
+   var ground = platforms.create(400, game.world.height - 64, 'ground');
    // Масштабируем её по ширине игры (оригинальный спрайт размером 400х32)
    ground.scale.setTo(2, 2);
    // Это останавливает его от падения при прыжке
@@ -171,6 +172,20 @@ function create()
    ledge.body.immovable = true;
    ledge = platforms.create(-150, 250, 'ground');
    ledge.body.immovable = true;
+   // Теперь подключим участки зыбкой земли
+   var point=50;
+   for (var j = 0; j < maxzemlya-4; j++)
+   {
+      var zemlya = platforms.create(point, game.world.height - 64, 'zemlya');
+      zemlya.body.immovable = true;
+      point=point+40;
+   }
+
+   
+   
+   
+   //var zemlya1 = platforms.create(0, game.world.height - 64, 'zemlya');
+   //zemlya1.body.immovable = true;
 
    // Создаем и настраиваем игрока: игрок расположенй на 32 пикселя на 150 
    // пикселей снизу игры. Мы использовать ранее загруженный актив «dude». Если 
@@ -187,7 +202,7 @@ function create()
    // стандартный цикл выполнения, и мы повторяем его для запуска в 
    // противоположном направлении. С набором анимации мы создаем несколько 
    // физических свойств.
-   player = game.add.sprite(32, game.world.height - 150, 'dude');
+   player = game.add.sprite(732, game.world.height - 150, 'dude');
    
    // Нужно включить физику на плеере: Фазер поддерживает различные физические
    // системы. Он поставляется с физикой аркад, физикой ниндзя и физикой 
@@ -196,8 +211,8 @@ function create()
    game.physics.arcade.enable(player);
     
    // Физические свойства игрока:  спрайты получают новое свойство тела, которое 
-   // является экземпляром ArcadePhysics.Body. Это представляет спрайт как ф
-   // изическое тело в движке Phaser Arcade Physics. Объект body обладает 
+   // является экземпляром ArcadePhysics.Body. Это представляет спрайт как 
+   // физическое тело в движке Phaser Arcade Physics. Объект body обладает 
    // множеством свойств, с которыми мы можем играть. Чтобы симулировать влияние
    // гравитации на спрайт, достаточно просто написать следующее: player.body.gravity.y = 300.
    // Это произвольное значение, но логически, чем выше значение, тем тяжелее 

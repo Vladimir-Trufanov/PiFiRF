@@ -155,9 +155,10 @@ PiFiRF
 2=www\Pages\Heady.html
 3=www\Pages\ListInfo.html
 4=www\Main.php
+5=www\Pages\CollStars\indexCollStars.php
 [Selected Project Files]
 Main=
-Selected=www\Styles\Styles.css
+Selected=www\Pages\CollStars\indexCollStars.php
 [www\index.php]
 TopLine=7
 Caret=75,10
@@ -168,8 +169,11 @@ Caret=16,216
 TopLine=1
 Caret=1,1
 [www\Pages\ListInfo.html]
-TopLine=45
+TopLine=30
 Caret=20,30
 [www\Main.php]
 TopLine=15
 Caret=24,20
+[www\Pages\CollStars\indexCollStars.php]
+TopLine=188
+Caret=30,205
