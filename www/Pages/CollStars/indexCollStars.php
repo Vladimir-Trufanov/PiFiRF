@@ -102,6 +102,38 @@ http://phaser.io/examples
 var game = new Phaser.Game
    (gWidth,gHeight,Phaser.AUTO,'FieldPlay',{ preload:preload,create:create,update:update });
 
+// Подключить участки зыбкой земли
+function _iamoroi(platforms,game,maxzemlya,iama,point)
+{
+   var zemlya = platforms.create(point, game.world.height - 64, 'zemlya');
+   zemlya.body.immovable = true;
+   point=point+40;
+   zemlya = platforms.create(point, game.world.height - 64, 'zemlya');
+   zemlya.body.immovable = true;
+}
+function iamoroi(platforms,game,maxzemlya,iama)
+{
+   var point=0;
+   for (var j = 0; j < maxzemlya; j=j+2)
+   {
+      if (iama==-1)
+      {
+         _iamoroi(platforms,game,maxzemlya,iama,point);
+         point=point+80;
+      }
+      else if (iama==j)
+      {
+         point=point+80;
+      }
+      else
+      {
+         _iamoroi(platforms,game,maxzemlya,iama,point);
+         point=point+80;
+      }
+   }
+}
+
+
 function preload() 
 {
    /*  
@@ -173,19 +205,9 @@ function create()
    ledge = platforms.create(-150, 250, 'ground');
    ledge.body.immovable = true;
    // Теперь подключим участки зыбкой земли
-   var point=50;
-   for (var j = 0; j < maxzemlya-4; j++)
-   {
-      var zemlya = platforms.create(point, game.world.height - 64, 'zemlya');
-      zemlya.body.immovable = true;
-      point=point+40;
-   }
-
-   
-   
-   
-   //var zemlya1 = platforms.create(0, game.world.height - 64, 'zemlya');
-   //zemlya1.body.immovable = true;
+   var iama=-1;
+   //var iama=8;
+   iamoroi(platforms,game,maxzemlya,iama);
 
    // Создаем и настраиваем игрока: игрок расположенй на 32 пикселя на 150 
    // пикселей снизу игры. Мы использовать ранее загруженный актив «dude». Если 
