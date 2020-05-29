@@ -102,38 +102,19 @@ http://phaser.io/examples
 var game = new Phaser.Game
    (gWidth,gHeight,Phaser.AUTO,'FieldPlay',{ preload:preload,create:create,update:update });
 
-// Подключить участки зыбкой земли
-function _iamoroi(platforms,game,maxzemlya,iama,point)
+// Подключить участки зыбкой земли, "вырывая яму"
+function IamoCreate(platforms,game,maxzemlya)
 {
-   var zemlya = platforms.create(point, game.world.height - 64, 'zemlya');
-   zemlya.body.immovable = true;
-   point=point+40;
-   zemlya = platforms.create(point, game.world.height - 64, 'zemlya');
-   zemlya.body.immovable = true;
-}
-function iamoroi(platforms,game,maxzemlya,iama)
-{
-   var point=0;
-   for (var j = 0; j < maxzemlya; j=j+2)
+   //console.log('IamoCreate');
+   point=0;
+   for (var j = 0; j < maxzemlya; j++)
    {
-      if (iama==-1)
-      {
-         _iamoroi(platforms,game,maxzemlya,iama,point);
-         point=point+80;
-      }
-      else if (iama==j)
-      {
-         point=point+80;
-      }
-      else
-      {
-         _iamoroi(platforms,game,maxzemlya,iama,point);
-         point=point+80;
-      }
+      //console.log('jZ=',j);
+      zemlyarr[j]=platforms.create(point, game.world.height - 64, 'zemlya');
+      zemlyarr[j].body.immovable = true;
+      point=point+40;      
    }
 }
-
-
 function preload() 
 {
    /*  
@@ -154,6 +135,8 @@ var platforms;
 var cursors;
 var stars;
 var maxzemlya=10;         // максимальное число зыбких земель, которые могут стать ямами
+var point;
+var zemlyarr=[0,1,2,3,4,5,6,7,8,9];
 /*  
 // Обеспечиваем подсчет очков. Для этого мы будем использовать объект Phaser.Text. 
 // Здесь мы создаем две новые переменные, одну для хранения фактической оценки 
@@ -205,9 +188,7 @@ function create()
    ledge = platforms.create(-150, 250, 'ground');
    ledge.body.immovable = true;
    // Теперь подключим участки зыбкой земли
-   var iama=-1;
-   //var iama=8;
-   iamoroi(platforms,game,maxzemlya,iama);
+   IamoCreate(platforms,game,maxzemlya);
 
    // Создаем и настраиваем игрока: игрок расположенй на 32 пикселя на 150 
    // пикселей снизу игры. Мы использовать ранее загруженный актив «dude». Если 
@@ -313,6 +294,14 @@ function create()
 // обоими уступами. Результатом является устойчивая платформа.
 function update() 
 {
+   // Роем текущую яму
+   if (e_iama)
+   {
+      point=Math.floor(Math.random()*10);
+      //console.log('=40=',point);
+      zemlyarr[point].destroy();
+      e_iama=false;
+   }
    // Чтобы позволить игроку сталкиваться и использовать физические свойства, 
    // нам нужно ввести проверку столкновения в функции обновления:
    // сталкиваем игрока и звезды с платформами

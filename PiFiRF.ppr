@@ -92,7 +92,7 @@ PiFiRF
 				www\Images\underline.png
 			-img
 				www\img\ball.png
-			-Js
+			+Js
 				www\Js\phaser242.min.js
 				www\Js\phaser-arcade-physics.min.js
 				www\Js\Pifirf.js
@@ -156,11 +156,12 @@ PiFiRF
 3=www\Pages\ListInfo.html
 4=www\Main.php
 5=www\Pages\CollStars\indexCollStars.php
+6=www\Js\Pifirf.js
 [Selected Project Files]
 Main=
-Selected=www\Pages\CollStars\indexCollStars.php
+Selected=www\Js\Pifirf.js
 [www\index.php]
-TopLine=7
+TopLine=1
 Caret=75,10
 [www\Styles\Styles.css]
 TopLine=196
@@ -175,5 +176,8 @@ Caret=20,30
 TopLine=15
 Caret=24,20
 [www\Pages\CollStars\indexCollStars.php]
-TopLine=193
-Caret=1,211
+TopLine=235
+Caret=25,254
+[www\Js\Pifirf.js]
+TopLine=92
+Caret=1,111
