@@ -159,9 +159,9 @@ PiFiRF
 6=www\Js\Pifirf.js
 [Selected Project Files]
 Main=
-Selected=www\Js\Pifirf.js
+Selected=www\Main.php
 [www\index.php]
-TopLine=1
+TopLine=13
 Caret=75,10
 [www\Styles\Styles.css]
 TopLine=196
@@ -173,11 +173,11 @@ Caret=1,1
 TopLine=30
 Caret=20,30
 [www\Main.php]
-TopLine=15
-Caret=24,20
+TopLine=71
+Caret=46,84
 [www\Pages\CollStars\indexCollStars.php]
 TopLine=235
 Caret=25,254
 [www\Js\Pifirf.js]
-TopLine=92
+TopLine=88
 Caret=1,111

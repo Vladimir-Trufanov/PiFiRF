@@ -32,3 +32,7 @@ Stack trace:
 #1 {main}
   thrown in C:\PiFiRF\www\Main.php on line 139
 [05-May-2020 17:00:04 Asia/Kuwait] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in C:\PiFiRF\www\Main.php on line 171
+[18-Apr-2021 19:10:25 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPageStarter/PageStarterClass.php' (include_path='.;C:\php\pear') in C:\PiFiRF\www\Main.php on line 84
+[19-Apr-2021 11:52:26 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPageStarter/PageStarterClass.php' (include_path='.;C:\php\pear') in C:\PiFiRF\www\Main.php on line 84
+[19-Apr-2021 15:00:57 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPageStarter/PageStarterClass.php' (include_path='.;C:\php\pear') in C:\PiFiRF\www\Main.php on line 84
+[19-Apr-2021 15:02:28 Asia/Kuwait] PHP Fatal error:  require_once(): Failed opening required 'C:/TPhpTools/TPageStarter/PageStarterClass.php' (include_path='.;C:\php\pear') in C:\PiFiRF\www\Main.php on line 84

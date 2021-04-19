@@ -81,7 +81,7 @@ require_once $TPhpPrown."/TPhpPrown/MakeParm.php";
 require_once $TPhpPrown."/TPhpPrown/ViewGlobal.php";
 */
 // Подключаем задействованные классы
-require_once $SiteHost."/TPhpTools/TPageStarter/PageStarterClass.php";
+require_once $SiteHost."/TPhpTools/TPhpTools/TPageStarter/PageStarterClass.php";
 // Подключаем рабочие модули сайта 
 //require_once $SiteRoot."/Common.php";
 //require_once $SiteRoot."/iniMenu.php";
